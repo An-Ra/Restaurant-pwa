@@ -54,7 +54,7 @@ ${restaurant.customerReviews.map((key) => (
 `;
 
 const createRestaurantItemTemplate = (restaurant) => `
-  <div id="maincontent" class="restaurant-item">
+  <div class="restaurant-item">
     <div class="restaurant-item__header">
         <img class="restaurant-item__header__poster" alt="${restaurant.name}"
             src="${CONFIG.BASE_IMAGE_URL}${restaurant.pictureId}">

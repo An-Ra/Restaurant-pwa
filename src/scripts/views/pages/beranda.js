@@ -5,7 +5,7 @@ const beranda = {
   async render() {
     return `
     <img class="heros" src='heros/hero.jpg'></img>
-      <div class="content">
+      <div id="maincontent" class="content">
         <h2 class="content__heading">Daftar Restaurant</h2>
         <div id="restaurants" class="restaurants">
 

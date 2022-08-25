@@ -6,7 +6,7 @@ import LikeButtonInitiator from '../../utils/like-button-initiator';
 const Detail = {
   async render() {
     return `
-      <div id="restaurant-detail" class="restaurant"></div>
+      <div id="restaurant-detail" class="restaurant" tabindex="0"></div>
       <div id="likeButtonContainer"></div>
     `;
   },
@@ -19,6 +19,8 @@ const Detail = {
     const textReview = document.querySelector('.inputreview');
     const nameReview = document.querySelector('.namereviewer');
     const btnReview = document.querySelector('.kirim-ulasan');
+    const skiplink = document.querySelector('.skip-link');
+    console.log(skiplink);
     LikeButtonInitiator.init({
       likeButtonContainer: document.getElementById('likeButtonContainer'),
       restaurant: {
@@ -47,6 +49,11 @@ const Detail = {
         // eslint-disable-next-line no-alert
         alert('Terimakasih, Ulasan Kamu Sudah Di Tambahkan! ');
       }
+    });
+    skiplink.addEventListener('click', (e) => {
+      const ela = document.getElementById('restaurant-detail');
+      ela.focus();
+      e.preventDefault();
     });
   },
 };
