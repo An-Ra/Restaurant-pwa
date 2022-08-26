@@ -20,7 +20,6 @@ const Detail = {
     const nameReview = document.querySelector('.namereviewer');
     const btnReview = document.querySelector('.kirim-ulasan');
     const skiplink = document.querySelector('.skip-link');
-    console.log(skiplink);
     LikeButtonInitiator.init({
       likeButtonContainer: document.getElementById('likeButtonContainer'),
       restaurant: {
