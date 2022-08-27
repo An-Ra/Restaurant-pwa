@@ -8,7 +8,8 @@
     "build": "webpack --config webpack.prod.js",
     "lint": "npx eslint ./specs",
     "test": "npx karma start",
-    "e2e": "codeceptjs run --steps"
+    "e2e": "codeceptjs run --steps",
+    "build-image": "node sharp.js"
   },
   "keywords": [],
   "author": "",
@@ -28,6 +29,8 @@
     "html-webpack-plugin": "^5.5.0",
     "http-server": "^14.1.1",
     "idb": "^7.0.2",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-webpack-plugin": "^2.4.2",
     "jasmine-ajax": "^4.0.0",
     "jasmine-core": "^4.3.0",
     "karma": "^6.4.0",
@@ -37,13 +40,16 @@
     "karma-sourcemap-loader": "^0.3.8",
     "karma-webpack": "^5.0.0",
     "puppeteer": "^16.2.0",
+    "sharp": "^0.30.7",
     "style-loader": "^3.3.1",
     "webpack": "^5.73.0",
+    "webpack-bundle-analyzer": "^4.6.1",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.9.2",
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
+    "lazysizes": "^5.3.2",
     "regenerator-runtime": "^0.13.9"
   }
 }
