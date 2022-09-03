@@ -84,7 +84,7 @@ const createLikedButtonTemplate = () => `
 
 const createUnavailableFavorite = () => `
       <div id="UnavailableFavorite">
-      <h1> Belum Ada Restoran Favorit Kamu </h1>
+      <h1 class="favorite-restaurant-not-found">Belum Ada Restoran Favorit Kamu</h1>
       </div>
 `;
 

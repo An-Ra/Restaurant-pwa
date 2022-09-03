@@ -1,0 +1,15 @@
+
+
+<<< Recorded commands on Sat Aug 27 2022 20:42:36 GMT+0700 (Western Indonesia Time)
+I.amOnPage('/');
+
+<<< Recorded commands on Sat Aug 27 2022 20:59:53 GMT+0700 (Western Indonesia Time)
+I.click(locate('.restaurant-item .restaurant-item__content button').first());
+I.seeElement('#likeButton');
+I.click('#likeButton');
+
+<<< Recorded commands on Sat Aug 27 2022 21:01:14 GMT+0700 (Western Indonesia Time)
+I.seeElement('.restaurant-item .restaurant-item__content button')
+
+<<< Recorded commands on Sat Aug 27 2022 21:24:59 GMT+0700 (Western Indonesia Time)
+I.seeElement(".restaurant-item .restaurant-item__content h3")
