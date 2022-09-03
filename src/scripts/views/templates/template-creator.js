@@ -3,7 +3,7 @@ import 'lazysizes';
 import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 const createRestaurantDetailTemplate = (restaurant) => `
-  <img id="maincontent" alt="Gambar Restaurant ${restaurant.name}" class="img-detail lazyload" src="${CONFIG.BASE_IMAGE_URL}${restaurant.pictureId}"></img>
+  <img id="maincontent" alt="Gambar Restaurant ${restaurant.name}" class="img-detail lazyload" data-src="${CONFIG.BASE_IMAGE_URL}${restaurant.pictureId}"></img>
   <hr/>
   <div id="restaurant-info">
   <h2>${restaurant.name}</h2> <h3>⭐️${restaurant.rating}</h3>
@@ -59,7 +59,7 @@ const createRestaurantItemTemplate = (restaurant) => `
   <div class="restaurant-item">
     <div class="restaurant-item__header">
         <img class="restaurant-item__header__poster lazyload" alt="${restaurant.name}"
-            src="${CONFIG.BASE_IMAGE_URL}${restaurant.pictureId}">
+        data-src="${CONFIG.BASE_IMAGE_URL}${restaurant.pictureId}">
         <div class="restaurant-item__header__rating">
             <p>⭐️<span class="restaurant-item__header__rating__score">${restaurant.rating}</span></p>
         </div>

@@ -14,11 +14,11 @@ exports.config = {
     Puppeteer: {
       url: 'http://localhost:9002',
       show: true,
-      windowSize: 'y'
-    }
+      windowSize: 'y',
+    },
   },
   include: {
-    I: './steps_file.js'
+    I: './steps_file.js',
   },
-  name: 'Restaurant-pwa'
-}
+  name: 'Restaurant-pwa',
+};

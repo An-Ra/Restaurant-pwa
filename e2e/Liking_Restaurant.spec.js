@@ -1,5 +1,5 @@
+/* eslint-disable no-undef */
 const assert = require('assert');
-const { async } = require('regenerator-runtime');
 
 Feature('Liking Restaurant');
 
@@ -7,7 +7,7 @@ Before(({ I }) => {
   I.amOnPage('/#/favorite');
 });
 
-Scenario('test something', async ({ I }) => {
+Scenario('Testing E2E Liking and Unliking Restaurang', async ({ I }) => {
   I.see('Belum Ada Restoran Favorit Kamu', '.favorite-restaurant-not-found');
   I.amOnPage('/');
   I.waitForElement('.restaurant-item .restaurant-item__content button', 10);
@@ -25,5 +25,5 @@ Scenario('test something', async ({ I }) => {
   I.seeElement('[aria-label="unlike this restaurant"]');
   I.click('#likeButton');
   I.amOnPage('/#/favorite');
-  pause();
+  assert.strictEqual(likedRestaurantTitle, undefined);
 });
