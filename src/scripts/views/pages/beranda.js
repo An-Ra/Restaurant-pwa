@@ -4,7 +4,13 @@ import { createRestaurantItemTemplate } from '../templates/template-creator';
 const beranda = {
   async render() {
     return `
-    <img class="heros" src='heros/hero.jpg'></img>
+    <picture>
+    <source class="heros"  media="(max-width: 600px)" srcset="heros/hero-small.jpg">
+    <source class="heros" media="(max-width: 800px)" srcset="heros/hero-medium.jpg">
+    <source class="heros" media="(max-width: 1200px)" srcset="heros/hero-large.jpg">
+    <img class="heros" src='heros/hero.jpg' 
+         alt="heros banner">
+   </picture>
       <div id="maincontent" class="content">
         <h2 class="content__heading">Daftar Restaurant</h2>
         <div id="restaurants" class="restaurants">
